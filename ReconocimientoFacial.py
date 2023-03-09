@@ -1,3 +1,11 @@
+""" 
+En este codigo utilize la libreria face-recognition
+junto con metodos de Numpy para crear un programa
+que observa las caras de las personas mediante una
+camara y lleva a cabo diferentes funciones de asistencia
+"""
+
+
 from cv2 import cv2
 import face_recognition as fr
 import os
