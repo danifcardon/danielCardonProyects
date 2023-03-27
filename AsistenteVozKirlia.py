@@ -1,10 +1,18 @@
 """
-Este programa es un Asistende de voz llamada
-Kirlia que se encarga de recibir informacion
-desde el microfono del usuario, procesarla y 
-devolver la funcion adecuada. Esta diseñado
-de forma tal que sea eficiente la forma de
-agregar funcionalidades a la aplicacion.
+Este programa es un asistente de voz llamado "Kirlia", 
+realizado utilizando la librería “Speech Recognition” 
+junto con numerosas librerías de información de Python, 
+capaz de recibir información de la entrada del micrófono del usuario, 
+procesarla y proporcionar la respuesta adecuada. 
+Este programa ha sido diseñado teniendo en cuenta la eficiencia 
+y la escalabilidad, lo que permite la incorporación de nuevas 
+funcionalidades a la aplicación de manera ágil y sencilla. 
+Además, gracias a su tecnología, este asistente de voz representa 
+una herramienta eficaz para mejorar la interacción del usuario con 
+la tecnología y optimizar el acceso a la información, especialmente 
+para personas con discapacidades que pueden tener dificultades 
+para utilizar dispositivos convencionales.
+
 """
 
 
