@@ -1,8 +1,12 @@
 """ 
-En este codigo utilize la libreria face-recognition
-junto con metodos de Numpy para crear un programa
-que observa las caras de las personas mediante una
-camara y lleva a cabo diferentes funciones de asistencia
+En el desarrollo de este programa, utilice la librería 
+face-recognition junto con métodos de Numpy para 
+implementar un sistema de vigilancia y asistencia que 
+permite detectar rostros a través de una cámara en 
+tiempo real y registrar una asistencia en una base de datos. 
+Esta tecnología permite llevar a cabo diversas funciones, 
+como el reconocimiento facial en eventos, la gestión de 
+asistentes o la optimización de procesos de identificación para una empresa.
 """
 
 
