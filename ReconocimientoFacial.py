@@ -1,12 +1,14 @@
 """ 
-En el desarrollo de este programa, utilice la librería 
-face-recognition junto con métodos de Numpy para 
-implementar un sistema de vigilancia y asistencia que 
-permite detectar rostros a través de una cámara en 
-tiempo real y registrar una asistencia en una base de datos. 
-Esta tecnología permite llevar a cabo diversas funciones, 
-como el reconocimiento facial en eventos, la gestión de 
-asistentes o la optimización de procesos de identificación para una empresa.
+En el desarrollo de este programa, utilicé la librería face-recognition 
+junto con métodos de Numpy para implementar un sistema de vigilancia y 
+asistencia que permite detectar rostros a través de una cámara en 
+tiempo real y registrar una asistencia en una base de datos MySQL. Esta 
+tecnología permite llevar a cabo diversas funciones, como el reconocimiento 
+facial en eventos, la gestión de asistentes o la optimización de procesos 
+de identificación para una empresa. Los datos de asistencia se almacenan de 
+manera segura y eficiente en una base de datos MySQL, lo que permite un 
+acceso rápido y confiable a la información de asistencia para su posterior 
+análisis y generación de informes.
 """
 
 
@@ -15,6 +17,24 @@ import face_recognition as fr
 import os
 import numpy
 from datetime import datetime
+import mysql.connector
+
+# Database connection configuration
+db_config = {
+    'host': 'localhost',
+    'user': 'your_username',
+    'password': 'your_password',
+    'database': 'your_database'
+}
+
+# Create a database connection
+db_connection = mysql.connector.connect(**db_config)
+db_cursor = db_connection.cursor()
+
+# Create the 'attendance' table in the database (if it doesn't exist)
+db_cursor.execute("CREATE TABLE IF NOT EXISTS attendance (id INT AUTO_INCREMENT PRIMARY KEY, employee_name VARCHAR(255), entry_time DATETIME)")
+
+# Remaining code...
 
 # crear base de datos
 ruta = 'Empleados'
@@ -31,7 +51,6 @@ print(nombres_empleados)
 
 # codificar imagenes
 def codificar(imagenes):
-
     # crear una lista nueva
     lista_codificada = []
 
@@ -48,23 +67,16 @@ def codificar(imagenes):
     # devolver lista codificada
     return lista_codificada
 
-
 # registrar los ingresos
 def registrar_ingresos(persona):
-    f = open('registro.csv', 'r+')
-    lista_datos = f.readlines()
-    nombres_registro = []
-    for linea in lista_datos:
-        ingreso = linea.split(',')
-        nombres_registro.append(ingreso[0])
+    ahora = datetime.now()
+    string_ahora = ahora.strftime('%H:%M:%S')
 
-    if persona not in nombres_registro:
-        ahora = datetime.now()
-        string_ahora = ahora.strftime('%H:%M:%S')
-        f.writelines(f'\n{persona}, {string_ahora}')
-
-
-
+    # Insert the attendance record into the database
+    insert_query = "INSERT INTO attendance (employee_name, entry_time) VALUES (%s, %s)"
+    insert_values = (persona, string_ahora)
+    db_cursor.execute(insert_query, insert_values)
+    db_connection.commit()
 
 lista_empleados_codificada = codificar(mis_imagenes)
 
@@ -95,9 +107,7 @@ else:
         # mostrar coincidencias si las hay
         if distancias[indice_coincidencia] > 0.6:
             print("No coincide con ninguno de nuestros empleados")
-
         else:
-
             # buscar el nombre del empleado encontrado
             nombre = nombres_empleados[indice_coincidencia]
 
@@ -113,3 +123,8 @@ else:
 
             # mantener ventana abierta
             cv2.waitKey(0)
+
+# Close the database connection when done
+db_cursor.close()
+db_connection.close()
+
