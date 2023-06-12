@@ -1,3 +1,12 @@
+ //I developed a program using the Selenium library and Chrome WebDriver in C# to create a web scraping tool. 
+ //This tool checks the availability of a specific event on a website. The program runs in headless mode to avoid 
+ //any visual interference. It navigates to the target webpage, extracts the page source, and parses it using 
+ //HtmlAgilityPack. By searching for "Agotado" (Spanish for "Sold out") within div elements, the program 
+ //determines if the event is available. If it is, it displays "Available!" and can emit a sound using a 
+ //Windows Media Player object. The program includes a countdown timer for scheduling regular checks. The 
+ //code demonstrates the use of Selenium, WebDriver, and HtmlAgilityPack for web scraping tasks, with potential 
+ //for further customization and integration into larger systems.
+
 using System;
 using System.IO;
 using System.Threading;
