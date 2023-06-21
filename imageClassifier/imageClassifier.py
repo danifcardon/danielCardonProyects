@@ -1,3 +1,13 @@
+# I developed this deep learning image classifier using Convolutional 
+# Neural Networks (CNN) for object recognition. This program, implemented 
+# in Python, leverages popular deep learning frameworks such as TensorFlow, 
+# Keras, and PyTorch. It accurately identifies and classifies various objects 
+# within images, enabling applications in fields such as autonomous driving, 
+# medical imaging, and robotics. To ensure easy deployment and reproducibility, 
+# the application has been containerized using Docker, providing an isolated 
+# and portable execution environment.
+
+
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
