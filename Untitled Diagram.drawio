@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-12T14:40:12.513Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="DRJFFcPEeeAWvtg5tbPl" version="24.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-12T15:23:27.730Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="6VG3q13Ty7uH0SI1h1HW" version="24.6.5" type="github">
   <diagram id="2f404044-711c-603c-8f00-f6bb4c023d3c" name="Page-1">
-    <mxGraphModel dx="880" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -258,7 +258,7 @@
         <mxCell id="PekRNqlxdvRcHByh5EYv-84" value="SYSTEM&lt;div&gt;INYECTION POINTS&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/applications/saas_applications.svg;strokeColor=#FF0000;fillColor=#FFFF66;gradientColor=none;fontColor=#4277BB;labelBackgroundColor=#ffffff;spacingTop=3;" vertex="1" parent="21">
           <mxGeometry x="35" y="141" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PekRNqlxdvRcHByh5EYv-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="21" source="PekRNqlxdvRcHByh5EYv-92" target="6">
+        <mxCell id="PekRNqlxdvRcHByh5EYv-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="21" source="PekRNqlxdvRcHByh5EYv-92" target="6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PekRNqlxdvRcHByh5EYv-92" value="REGULATOR" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/users/user.svg;strokeColor=#FF0000;fillColor=#FFFF66;gradientColor=none;fontColor=#4277BB;labelBackgroundColor=#ffffff;spacingTop=3;" vertex="1" parent="21">
